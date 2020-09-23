@@ -12,7 +12,7 @@ import UIKit.UIImage
 
 //StringConstants struct is safer to use so there isnt any misspelling and to use within the code
 struct StringConstants {
-    fileprivate static let baseURL = "https://www.reddit.com/r/funny/.json"
+    fileprivate static let baseURL = "https://www.reddit.com"
     fileprivate static let rEndpoint = "r"
     fileprivate static let funnyEndpoint = "funny"
     fileprivate static let jsonExtension = "json"

@@ -7,16 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Post List Table View Controller-->
         <scene sceneID="PrB-KK-K48">
             <objects>
-                <tableViewController id="Zdp-ds-Jdf" sceneMemberID="viewController">
+                <tableViewController id="Zdp-ds-Jdf" customClass="PostListTableViewController" customModule="Reddit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uiV-yI-0Aw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1Io-ly-2Fd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" id="1Io-ly-2Fd" customClass="PostTableViewCell" customModule="Reddit" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="164"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Io-ly-2Fd" id="8aX-NK-J01">
@@ -35,7 +35,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CwN-Cp-kCw">
                                                     <rect key="frame" x="155.5" y="0.0" width="242.5" height="148"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dae-zC-7xR">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dae-zC-7xR">
                                                             <rect key="frame" x="0.0" y="0.0" width="242.5" height="119.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -62,6 +62,11 @@
                                         <constraint firstAttribute="trailing" secondItem="PsR-1Q-7Za" secondAttribute="trailing" constant="8" id="ioa-xy-cI1"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="thumbnailImageView" destination="beS-kl-fBp" id="6QJ-Og-wIw"/>
+                                    <outlet property="titleLabel" destination="dae-zC-7xR" id="ZTb-go-qGS"/>
+                                    <outlet property="upvoteLabel" destination="ZZS-Sy-WoL" id="9yk-D2-plS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
